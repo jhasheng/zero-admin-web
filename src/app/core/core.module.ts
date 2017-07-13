@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 /* Angular Material */
-import { MdToolbarModule, MdCardModule, MdButtonModule, MdCheckboxModule, MdRadioModule } from '@angular/material';
+import { MdToolbarModule, MdIconModule, MdCardModule, MdButtonModule, MdCheckboxModule, MdRadioModule } from '@angular/material';
 
 import { LayoutComponent } from './layout/layout.component';
 
@@ -12,6 +12,7 @@ import { LayoutComponent } from './layout/layout.component';
     CommonModule,
     RouterModule,
     MdToolbarModule,
+    MdIconModule,
     MdCardModule,
     MdButtonModule,
     MdCheckboxModule,
