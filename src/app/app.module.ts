@@ -10,11 +10,18 @@ import { MdToolbarModule, MdCardModule, MdCheckboxModule, MdRadioModule } from '
 
 /* Feature Modules */
 import { CoreModule } from './core/core.module';
+import { ZeroModule } from './components/zero.module';
+
 /* Routing Module */
 import { AppRoutingModule } from './app-routing.module';
+
 /* App Root */
 import { AppComponent } from './app.component';
+
+/* Components and Directives */
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+// import { NAV_DROPDOWN_DIRECTIVES } from './shared/nav-dropdown.directive';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +31,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     BrowserModule,
     BrowserAnimationsModule,
     CoreModule,
+    ZeroModule,
     AppRoutingModule,
     FormsModule,
     MdToolbarModule,
