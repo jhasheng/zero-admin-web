@@ -1,9 +1,11 @@
-import { Subject, Subscription } from 'rxjs';
-
-import { Component, OnInit, OnDestroy, DoCheck, Input, HostBinding, HostListener, ViewChild, ElementRef, ChangeDetectorRef, ViewEncapsulation } from '@angular/core';
+import { Subject, Subscription } from 'rxjs/RX';
+import {
+  Component, OnInit, OnDestroy, DoCheck, Input, HostBinding, HostListener,
+  ViewChild, ElementRef, ChangeDetectorRef, ViewEncapsulation
+} from '@angular/core';
 
 import { PerfectScrollbarDirective } from './perfect-scrollbar.directive';
-import { IPerfectScrollbarOptions } from './perfect-scrollbar.options';
+import { IPerfectScrollbarOptions } from './perfect-scrollbar.options.interface';
 
 @Component({
   selector: 'app-perfect-scrollbar',
@@ -20,11 +22,11 @@ export class PerfectScrollbarComponent implements OnInit, OnDestroy, DoCheck {
   private timeoutState: number = null;
   private timeoutScroll: number = null;
 
-  private usePropagationX: boolean = false;
-  private usePropagationY: boolean = false;
+  private usePropagationX = false;
+  private usePropagationY = false;
 
-  private userInteraction: boolean = false;
-  private allowPropagation: boolean = false;
+  private userInteraction = false;
+  private allowPropagation = false;
 
   private scrollSub: Subscription = null;
   private scrollUpdate: Subject<string> = new Subject();
@@ -36,19 +38,19 @@ export class PerfectScrollbarComponent implements OnInit, OnDestroy, DoCheck {
   private activeUpdate: Subject<boolean> = new Subject();
 
   @HostBinding('hidden')
-  @Input() hidden: boolean = false;
+  @Input() hidden = false;
 
-  @Input() disabled: boolean = false;
+  @Input() disabled = false;
 
-  @Input() usePSClass: boolean = true;
+  @Input() usePSClass = true;
 
   @HostBinding('class.ps-show-limits')
-  @Input() autoPropagation: boolean = false;
+  @Input() autoPropagation = false;
 
   @HostBinding('class.ps-show-active')
-  @Input() scrollIndicators: boolean = false;
+  @Input() scrollIndicators = false;
 
-  @Input() runInsideAngular: boolean = false;
+  @Input() runInsideAngular = false;
 
   @Input() config: IPerfectScrollbarOptions;
 
@@ -244,7 +246,7 @@ export class PerfectScrollbarComponent implements OnInit, OnDestroy, DoCheck {
       if (this.allowPropagation) {
         // PS stops the touchmove event so lets re-emit it here
         if (this.elementRef.nativeElement) {
-          let newEvent = new MouseEvent('touchstart', event);
+          const newEvent = new MouseEvent('touchstart', event);
           this.cancelEvent = new MouseEvent('touchmove', event);
 
           newEvent['psGenerated'] = this.cancelEvent['psGenerated'] = true;

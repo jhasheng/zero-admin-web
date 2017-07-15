@@ -1,12 +1,16 @@
 import * as Ps from 'perfect-scrollbar';
 
-import { Directive, DoCheck, OnDestroy, OnChanges, AfterViewInit, Input, Optional, HostBinding, HostListener, ElementRef, SimpleChanges, KeyValueDiffers, NgZone } from '@angular/core';
+import {
+  Directive, DoCheck, OnDestroy, OnChanges, AfterViewInit, Input, Optional,
+  HostBinding, HostListener, ElementRef, SimpleChanges, KeyValueDiffers, NgZone
+} from '@angular/core';
 
-import { IPerfectScrollbarOptions, PerfectScrollbarOptions, Geometry } from './perfect-scrollbar.options';
+import { IPerfectScrollbarOptions } from './perfect-scrollbar.options.interface';
+import { PerfectScrollbarOptions, Geometry } from './perfect-scrollbar.options';
 
 @Directive({
   selector: '[appPerfectScrollbar]',
-  exportAs: 'appPerfectScrollbar'
+  exportAs: 'ngxPerfectScrollbar'
 })
 export class PerfectScrollbarDirective implements DoCheck, OnDestroy, OnChanges, AfterViewInit {
   private width: number;
@@ -18,17 +22,17 @@ export class PerfectScrollbarDirective implements DoCheck, OnDestroy, OnChanges,
   private contentHeight: number;
 
   @HostBinding('hidden')
-  @Input() hidden: boolean = false;
+  @Input() hidden = false;
 
-  @Input() disabled: boolean = false;
+  @Input() disabled = false;
 
   @HostBinding('class.ps')
-  @Input() usePSClass: boolean = true;
+  @Input() usePSClass = true;
 
   @HostBinding('style.position')
-  @Input() psPosStyle: string = 'relative';
+  @Input() psPosStyle = 'relative';
 
-  @Input() runInsideAngular: boolean = false;
+  @Input() runInsideAngular = false;
 
   @Input('perfect-scrollbar') config: IPerfectScrollbarOptions;
 
@@ -36,11 +40,13 @@ export class PerfectScrollbarDirective implements DoCheck, OnDestroy, OnChanges,
     this.update();
   }
 
-  constructor(public elementRef: ElementRef, @Optional() private defaults: PerfectScrollbarOptions, private differs: KeyValueDiffers, private zone: NgZone) { }
+  constructor(public elementRef: ElementRef, @Optional()
+  private defaults: PerfectScrollbarOptions,
+    private differs: KeyValueDiffers, private zone: NgZone) { }
 
   ngDoCheck() {
     if (!this.disabled && this.configDiff) {
-      let changes = this.configDiff.diff(this.config || {});
+      const changes = this.configDiff.diff(this.config || {});
 
       if (changes) {
         this.ngOnDestroy();
@@ -53,8 +59,8 @@ export class PerfectScrollbarDirective implements DoCheck, OnDestroy, OnChanges,
         let contentWidth = this.contentWidth;
         let contentHeight = this.contentHeight;
 
-        let width = this.elementRef.nativeElement.offsetWidth;
-        let height = this.elementRef.nativeElement.offsetHeight;
+        const width = this.elementRef.nativeElement.offsetWidth;
+        const height = this.elementRef.nativeElement.offsetHeight;
 
         if (this.elementRef.nativeElement.children &&
           this.elementRef.nativeElement.children.length) {
@@ -100,7 +106,7 @@ export class PerfectScrollbarDirective implements DoCheck, OnDestroy, OnChanges,
 
   ngAfterViewInit() {
     if (!this.disabled) {
-      let config = new PerfectScrollbarOptions(this.defaults);
+      const config = new PerfectScrollbarOptions(this.defaults);
 
       config.assign(this.config);
 
@@ -200,9 +206,9 @@ export class PerfectScrollbarDirective implements DoCheck, OnDestroy, OnChanges,
       let oldTimestamp = performance.now();
       let oldValue = this.elementRef.nativeElement[target];
 
-      let cosParameter = (oldValue - value) / 2;
+      const cosParameter = (oldValue - value) / 2;
 
-      let step = (newTimestamp) => {
+      const step = (newTimestamp) => {
         scrollCount += Math.PI / (speed / (newTimestamp - oldTimestamp));
 
         newValue = Math.round(value + cosParameter + cosParameter * Math.cos(scrollCount));
