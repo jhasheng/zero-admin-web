@@ -9,7 +9,6 @@ import { LayoutComponent } from './layout/layout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
-import { NAV_DROPDOWN_DIRECTIVES } from './sidenav/nav-dropdown.directive';
 import { PsDirective } from './sidenav/perfect-scrollable.directive';
 
 @NgModule({
@@ -18,7 +17,7 @@ import { PsDirective } from './sidenav/perfect-scrollable.directive';
     RouterModule,
     SharedModule
   ],
-  declarations: [LayoutComponent, NavbarComponent, SidenavComponent, NAV_DROPDOWN_DIRECTIVES, PsDirective],
+  declarations: [LayoutComponent, NavbarComponent, SidenavComponent, PsDirective],
   exports: [LayoutComponent]
 })
 export class CoreModule {

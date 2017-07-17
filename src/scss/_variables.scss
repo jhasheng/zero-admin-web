@@ -1,8 +1,25 @@
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
+$font-family-sans-serif: -apple-system,
+system-ui,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif !default;
+$font-family-serif: Georgia,
+"Times New Roman",
+Times,
+serif !default;
+$font-family-monospace: Menlo,
+Monaco,
+Consolas,
+"Liberation Mono",
+"Courier New",
+monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+// Responsive
+$max-width-600: "(max-width: 600px) and (orientation: portrait)";
+$max-width-960: "(max-width: 960px) and (orientation: portrait)";

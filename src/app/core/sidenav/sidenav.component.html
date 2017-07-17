@@ -1,53 +1,100 @@
-<md-sidenav-container class="app-inner">
-  <md-sidenav class="sidebar-panel" mode="side" opened="true" appPs>
+<md-sidenav-container class="app-sidenav-container">
+  <md-sidenav class="app-sidenav-sidebar" mode="side" opened="true" appPs>
     <md-nav-list class="navigation">
 
-      <md-list-item appNavDropdown>
-        <a href="javascript:;" appNavDropdownToggle>
+      <md-list-item>
+        <a [routerLink]="dashboard" routerLinkActive="active">
           <md-icon>explore</md-icon>
           <span>Home</span>
         </a>
       </md-list-item>
 
-      <md-list-item appNavDropdown>
-        <a href="javascript:;" appNavDropdownToggle>
-          <md-icon>apps</md-icon>
-          <span>Apps</span>
-          <span class="menu-badge mat-red">5</span>
-          <md-icon>arrow_drop_down</md-icon>
-        </a>
-        <md-nav-list class="sub-menu">
-          <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-            <a class="relative" href="/apps/calendar">Calendar</a>
-          </md-list-item>
-          <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-            <a class="relative" href="/apps/media">Media</a>
-          </md-list-item>
-          <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-            <a class="relative" href="/apps/messages">Messages</a>
-          </md-list-item>
-          <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-            <a class="relative" href="/apps/social">Social</a>
-          </md-list-item>
-          <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-            <a class="relative" href="/apps/chat">Chat</a>
-          </md-list-item>
-        </md-nav-list>
+      <md-list-item>
+        <md-expansion-panel>
+          <md-expansion-panel-header>
+            <a href="javascript:;">
+              <md-icon>apps</md-icon>
+              <span>Apps</span>
+            </a>
+          </md-expansion-panel-header>
+          <md-nav-list class="sub-menu">
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/calendar">Calendar</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/media">Media</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/messages">Messages</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/social">Social</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/chat">Chat</a>
+            </md-list-item>
+          </md-nav-list>
+        </md-expansion-panel>
       </md-list-item>
 
+      <md-list-item>
+        <md-expansion-panel>
+          <md-expansion-panel-header>
+            <a href="javascript:;">
+              <md-icon>apps</md-icon>
+              <span>Apps</span>
+            </a>
+          </md-expansion-panel-header>
+          <md-nav-list class="sub-menu">
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/calendar">Calendar</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/media">Media</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/messages">Messages</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/social">Social</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/chat">Chat</a>
+            </md-list-item>
+          </md-nav-list>
+        </md-expansion-panel>
+      </md-list-item>
 
+      <md-list-item>
+        <md-expansion-panel>
+          <md-expansion-panel-header>
+            <a href="javascript:;">
+              <md-icon>apps</md-icon>
+              <span>Apps</span>
+            </a>
+          </md-expansion-panel-header>
+          <md-nav-list class="sub-menu">
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/calendar">Calendar</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/media">Media</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/messages">Messages</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/social">Social</a>
+            </md-list-item>
+            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
+              <a class="relative" href="/apps/chat">Chat</a>
+            </md-list-item>
+          </md-nav-list>
+        </md-expansion-panel>
+      </md-list-item>
     </md-nav-list>
   </md-sidenav>
-  <!-- primary content -->
-  <div class="example-scrolling-content">
-    <div class="container">
-      Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum
-      etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem,
-      dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor
-      vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin,
-      quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper,
-      urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet.
-      Taciti dui, sapien consectetuer.
-    </div>
+  <div class="app-sidenav-content">
+    <router-outlet></router-outlet>
   </div>
 </md-sidenav-container>

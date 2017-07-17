@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 /* Angular Material */
 import {
   MdToolbarModule,
@@ -10,7 +11,9 @@ import {
   MdCardModule,
   MdButtonModule,
   MdCheckboxModule,
-  MdRadioModule
+  MdRadioModule,
+  MdExpansionModule,
+  MdSlideToggleModule
 } from '@angular/material';
 
 @NgModule({
@@ -18,6 +21,8 @@ import {
   declarations: [],
   exports: [
     CommonModule,
+    FormsModule,
+    FlexLayoutModule,
     MdToolbarModule,
     MdSidenavModule,
     MdListModule,
@@ -25,7 +30,9 @@ import {
     MdCardModule,
     MdButtonModule,
     MdCheckboxModule,
-    MdRadioModule]
+    MdRadioModule,
+    MdExpansionModule,
+    MdSlideToggleModule]
 })
 export class SharedModule {
 

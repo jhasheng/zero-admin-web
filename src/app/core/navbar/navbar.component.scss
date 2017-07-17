@@ -1,5 +1,5 @@
-$max-width-600: "(max-width: 600px) and (orientation: portrait)";
-$max-width-960: "(max-width: 960px) and (orientation: portrait)";
+@import '../../../scss/variables';
+
 .fill-remaining-space {
     // This fills the remaining space, by using flexbox. 
     // Every toolbar row uses a flexbox row layout.
@@ -50,7 +50,7 @@ md-toolbar {
         }
         .logo {
             // display: inline;
-            background-image: url(/assets/images/logo.png);
+            background-image: url(/assets/images/logo.svg);
             width: 109px;
             height: 25px;
             background-size: 109px 25px;
