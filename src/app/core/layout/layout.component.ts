@@ -8,6 +8,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
+  showSidebar = true;
+
   constructor() { }
 
   ngOnInit() {

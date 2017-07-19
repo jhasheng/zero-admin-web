@@ -1,22 +1,20 @@
 <md-sidenav-container class="app-sidenav-container">
-  <md-sidenav class="app-sidenav-sidebar" mode="side" opened="true" appPs>
+  <md-sidenav class="app-sidenav-sidebar" mode="side" [opened]="showSidebar" appPs>
+    
     <md-nav-list class="navigation">
-
       <md-list-item>
-        <a [routerLink]="dashboard" routerLinkActive="active">
+        <a routerLink="dashboard" routerLinkActive="active">
           <md-icon>explore</md-icon>
           <span>Home</span>
         </a>
       </md-list-item>
 
       <md-list-item>
-        <md-expansion-panel>
-          <md-expansion-panel-header>
-            <a href="javascript:;">
-              <md-icon>apps</md-icon>
-              <span>Apps</span>
-            </a>
-          </md-expansion-panel-header>
+        <app-expansion-list>
+          <app-expansion-list-header>
+            <md-icon>apps</md-icon>
+            <span>Apps</span>
+          </app-expansion-list-header>
           <md-nav-list class="sub-menu">
             <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
               <a class="relative" href="/apps/calendar">Calendar</a>
@@ -34,64 +32,9 @@
               <a class="relative" href="/apps/chat">Chat</a>
             </md-list-item>
           </md-nav-list>
-        </md-expansion-panel>
-      </md-list-item>
+        </app-expansion-list>
+      </md-list-item>    
 
-      <md-list-item>
-        <md-expansion-panel>
-          <md-expansion-panel-header>
-            <a href="javascript:;">
-              <md-icon>apps</md-icon>
-              <span>Apps</span>
-            </a>
-          </md-expansion-panel-header>
-          <md-nav-list class="sub-menu">
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/calendar">Calendar</a>
-            </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/media">Media</a>
-            </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/messages">Messages</a>
-            </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/social">Social</a>
-            </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/chat">Chat</a>
-            </md-list-item>
-          </md-nav-list>
-        </md-expansion-panel>
-      </md-list-item>
-
-      <md-list-item>
-        <md-expansion-panel>
-          <md-expansion-panel-header>
-            <a href="javascript:;">
-              <md-icon>apps</md-icon>
-              <span>Apps</span>
-            </a>
-          </md-expansion-panel-header>
-          <md-nav-list class="sub-menu">
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/calendar">Calendar</a>
-            </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/media">Media</a>
-            </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/messages">Messages</a>
-            </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/social">Social</a>
-            </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/chat">Chat</a>
-            </md-list-item>
-          </md-nav-list>
-        </md-expansion-panel>
-      </md-list-item>
     </md-nav-list>
   </md-sidenav>
   <div class="app-sidenav-content">

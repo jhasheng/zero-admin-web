@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,11 +6,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
-  constructor() { }
+  @Output('toggle') onToggle = new EventEmitter<void>();
 
-  ngOnInit() {
+  toggleSidebar() {
+    this.onToggle.emit();
   }
 
+  constructor() { }
 }

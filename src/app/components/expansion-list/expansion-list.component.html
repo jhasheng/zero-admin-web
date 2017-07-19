@@ -1,0 +1,7 @@
+<ng-content select="app-expansion-list-header"></ng-content>
+<div [class.mat-expanded]="expanded" class="mat-expansion-list-content" [@bodyExpansion]="_getExpandedState()" [id]="id">
+  <div class="mat-expansion-list-body">
+    <ng-content></ng-content>
+  </div>
+  <ng-content select="mat-action-row, md-action-row"></ng-content>
+</div>

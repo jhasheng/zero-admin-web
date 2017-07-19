@@ -5,6 +5,9 @@ import { RouterModule } from '@angular/router';
 /* Shared Modules */
 import { SharedModule } from '../shared/shared.module';
 
+/* Components Modules */
+import { ZeroModule } from '../components/zero.module';
+
 import { LayoutComponent } from './layout/layout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -15,9 +18,11 @@ import { PsDirective } from './sidenav/perfect-scrollable.directive';
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    ZeroModule
   ],
-  declarations: [LayoutComponent, NavbarComponent, SidenavComponent, PsDirective],
+  declarations: [LayoutComponent, NavbarComponent, SidenavComponent,
+    PsDirective],
   exports: [LayoutComponent]
 })
 export class CoreModule {

@@ -1,8 +1,11 @@
 @import '../../../scss/variables';
 $sidenav-width: 15rem;
-// app-sidenav {
-//     display: flex;
-// }
+md-sidenav-container {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .app-sidenav-container {
     height: calc(100vh - 64px);
     @media #{$max-width-600} {
@@ -38,23 +41,7 @@ md-sidenav.app-sidenav-sidebar {
             padding: 0 16px;
             &.active {
                 background: rgb(242, 246, 249);
-            }
-        }
-        .mat-expansion-panel-header {
-            padding: 0 16px;
-            a {
-                padding: 0;
-            }
-        }
-        .mat-expansion-panel-body {
-            padding: 0;
-        }
-        .mat-expanded {
-            .mat-expansion-panel-header {
-                background: rgba(0, 0, 0, 0.04);
-            }
-            .mat-list-item-content {
-                max-height: 2000px; // background: rgba(0, 0, 0, 0.04);
+                color: #1976d2;
             }
         }
     }

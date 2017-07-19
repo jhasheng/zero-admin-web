@@ -1,3 +1,2 @@
-<app-navbar></app-navbar>
-<app-sidenav></app-sidenav>
-<!-- <router-outlet></router-outlet> -->
+<app-navbar (toggle)="showSidebar = !showSidebar"></app-navbar>
+<app-sidenav [showSidebar]="showSidebar"></app-sidenav>
