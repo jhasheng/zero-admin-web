@@ -1,6 +1,6 @@
 <md-sidenav-container class="app-sidenav-container">
-  <md-sidenav class="app-sidenav-sidebar" mode="side" [opened]="showSidebar" appPs>
-    
+  <md-sidenav #sidenav class="app-sidenav-sidebar" mode="side" [opened]="isOpen" appPs>
+
     <md-nav-list class="navigation">
       <md-list-item>
         <a routerLink="dashboard" routerLinkActive="active">
@@ -33,7 +33,7 @@
             </md-list-item>
           </md-nav-list>
         </app-expansion-list>
-      </md-list-item>    
+      </md-list-item>
 
     </md-nav-list>
   </md-sidenav>

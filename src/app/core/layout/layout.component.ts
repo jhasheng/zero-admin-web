@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
+import { SidenavComponent } from '../sidenav/sidenav.component';
 
 @Component({
   selector: 'app-layout',
@@ -8,11 +9,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  showSidebar = true;
+  @ViewChild(SidenavComponent) sidenav: SidenavComponent
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }
