@@ -10,26 +10,46 @@
       </md-list-item>
 
       <md-list-item>
+        <app-expansion-list [expanded]="path.startsWith('user-manage')">
+          <app-expansion-list-header>
+            <md-icon>apps</md-icon>
+            <span>用户管理</span>
+          </app-expansion-list-header>
+          <md-nav-list class="sub-menu">
+            <md-list-item>
+              <a routerLink="user-manage/organization-units" routerLinkActive="active">组织单元</a>
+            </md-list-item>
+            <md-list-item>
+              <a routerLink="user-manage/roles" routerLinkActive="active">角色</a>
+            </md-list-item>
+            <md-list-item>
+              <a routerLink="user-manage/users" routerLinkActive="active">用户</a>
+            </md-list-item>
+          </md-nav-list>
+        </app-expansion-list>
+      </md-list-item>
+
+      <md-list-item>
         <app-expansion-list>
           <app-expansion-list-header>
             <md-icon>apps</md-icon>
             <span>Apps</span>
           </app-expansion-list-header>
           <md-nav-list class="sub-menu">
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/calendar">Calendar</a>
+            <md-list-item>
+              <a href="/apps/calendar">Calendar</a>
             </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/media">Media</a>
+            <md-list-item>
+              <a href="/apps/media">Media</a>
             </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/messages">Messages</a>
+            <md-list-item>
+              <a href="/apps/messages">Messages</a>
             </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/social">Social</a>
+            <md-list-item>
+              <a href="/apps/social">Social</a>
             </md-list-item>
-            <md-list-item class="mat-list-item" role="listitem" routerlinkactive="open">
-              <a class="relative" href="/apps/chat">Chat</a>
+            <md-list-item>
+              <a href="/apps/chat">Chat</a>
             </md-list-item>
           </md-nav-list>
         </app-expansion-list>

@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  checked = false;
-  indeterminate = false;
-  align = 'start';
-  disabled = false;
+  displayMode: string = 'default';
+  multi: boolean = false;
+  hideToggle: boolean = false;
+  showPanel3 = true;
 
   constructor() { }
 

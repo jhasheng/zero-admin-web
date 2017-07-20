@@ -16,6 +16,21 @@ import { AppComponent } from './app.component';
 /* Components and Directives */
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
+import {
+  MdToolbarModule,
+  MdSidenavModule,
+  MdListModule,
+  MdIconModule,
+  MdCardModule,
+  MdButtonModule,
+  MdCheckboxModule,
+  MdRadioModule,
+  MdExpansionModule,
+  MdSlideToggleModule
+} from '@angular/material';
+
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +40,19 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     BrowserModule,
     BrowserAnimationsModule,
     CoreModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    MdToolbarModule,
+    MdSidenavModule,
+    MdListModule,
+    MdIconModule,
+    MdCardModule,
+    MdButtonModule,
+    MdCheckboxModule,
+    MdRadioModule,
+    MdExpansionModule,
+    MdSlideToggleModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

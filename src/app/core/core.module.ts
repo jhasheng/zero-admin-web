@@ -21,8 +21,7 @@ import { PsDirective } from './sidenav/perfect-scrollable.directive';
     SharedModule,
     ZeroModule
   ],
-  declarations: [LayoutComponent, NavbarComponent, SidenavComponent,
-    PsDirective],
+  declarations: [LayoutComponent, NavbarComponent, SidenavComponent, PsDirective],
   exports: [LayoutComponent]
 })
 export class CoreModule {
