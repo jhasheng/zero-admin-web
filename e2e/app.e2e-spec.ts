@@ -1,14 +1,14 @@
-import { ZeroAdminWebPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('zero-admin-web App', () => {
-  let page: ZeroAdminWebPage;
+describe('demo App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new ZeroAdminWebPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });
