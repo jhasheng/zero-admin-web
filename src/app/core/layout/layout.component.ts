@@ -9,7 +9,7 @@ import { SidenavComponent } from '../sidenav/sidenav.component';
 })
 export class LayoutComponent implements OnInit {
 
-  @ViewChild(SidenavComponent) sidenav: SidenavComponent
+  @ViewChild(SidenavComponent) sidenav: SidenavComponent;
 
   constructor() { }
 

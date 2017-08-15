@@ -12,7 +12,12 @@ import {
   Host,
   ViewEncapsulation,
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  OnDestroy,
+  Renderer2,
+  ElementRef
 } from '@angular/core';
+
 import {
   trigger,
   state,
@@ -20,9 +25,8 @@ import {
   transition,
   animate,
 } from '@angular/animations';
-import { MdExpansionPanelHeader, SPACE, ENTER } from '@angular/material';
+import { MdExpansionPanelHeader, SPACE, ENTER, FocusOriginMonitor } from '@angular/material';
 import { ExpansionListComponent, EXPANSION_PANEL_ANIMATION_TIMING } from './expansion-list.component';
-
 
 /**
  * <md-expansion-panel-header> component.
@@ -57,5 +61,13 @@ import { ExpansionListComponent, EXPANSION_PANEL_ANIMATION_TIMING } from './expa
   ],
 })
 export class ExpansionListHeaderComponent extends MdExpansionPanelHeader {
-  constructor( @Host() public panel: ExpansionListComponent) { super(panel); }
+
+  constructor(
+    @Host() panel: ExpansionListComponent,
+    _renderer: Renderer2,
+    _element: ElementRef,
+    _focusOriginMonitor: FocusOriginMonitor,
+    _changeDetectorRef: ChangeDetectorRef) {
+    super(panel, _renderer, _element, _focusOriginMonitor, _changeDetectorRef);
+  }
 }
